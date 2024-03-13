@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% load static %}
+{% if user.is_authenticated %}
+Hi {{ user.username }}!
+{% else %}
+<link rel="stylesheet" href="static/css/home.css">
+
+
+<section class="section">
+  <div class="header-content containder">
+      <div class="spam">
+        <h1>
+          <span class="h1">¿Qué es el reciclaje?</span>
+        </h1>
+      </div>
+    <p class="txt-p">
+      El reciclaje es una forma de cuidar el planeta y evitar que se llene de basura. Consiste en transformar los
+      objetos y materiales que ya no usamos en otros nuevos que podemos volver a utilizar.
+    </p>
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/WVrxkF6TcQU?si=NBeX_ApB1fIJU0T2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</section>
+
+
+
+<section class="reciclaje">
+  <div class="tipo-content container">
+    <h2>Tipos de materiales reciclables y cómo separalos correctamente</h2>
+    <p class="txt-p">
+      Los materiales reciclables pueden ser de diferentes tipos, como papel, cartón, plástico, vidrio y metal. Cada uno
+      de ellos se puede reciclar de manera especial. Para reciclar, es importante poner cada tipo de material en su contenedor correcto. Aquí tienes una guía con contenedores y ejemplos de lo que puedes poner en cada uno:
+    </p>
+    <div class="recicla-group">
+      <div class="reci-1">
+        <div class="h3">
+          <img class="jpg" src='static/imagenes/negro.jpg' alt="">
+        </div>
+        <h3>Recipiente negro: residuos ordinarios</h3>
+        <p class="txt-k">Envolturas, paquetes de mecato y dulces, icopor, polvo de barrido, papel higiénico, servilletas, comida preparada, tapabocas.</p>
+      </div>
+
+      <div class="reci-1">
+        <div class="h3">
+          <img class="jpg" src='static/imagenes/verde.jpg' alt="">
+        </div>
+        <h3>Recipiente verde: residuos orgánicos compostables</h3>
+        <p class="txt-k">Cáscaras de huevo, verduras, frutas y residuos de jardinería.</p>
+      </div>
+
+      <div class="reci-1">
+        <div class="h3">
+          <img class="jpg" src='static/imagenes/blanco.jpg' alt="">
+        </div>
+        <h3>Recipiente blanco: residuos reciclables</h3>
+        <p class="txt-k">
+          Papel, vidrio, cartón, plástico y metal (limpios y secos).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="tipo-contec container">
+  <h2>Usos de los Materiales Reciclables</h2>
+  <p class="txt-p">
+    Los materiales reciclables se pueden transformar en cosas nuevas. Por ejemplo, el papel se convierte en libros y
+    cartones, el plástico se usa para hacer juguetes, y el vidrio se convierte en botellas nuevitas.
+  </p>
+
+  <p>Recuerda que reciclar es una forma genial de ayudar al planeta. ¡Sé un superhéroe del reciclaje!</p>  
+</div>
+<section>
+
+</section>
+{% endif %}
+{% endblock %}

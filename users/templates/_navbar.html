@@ -1,0 +1,22 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<header class="header">
+    <a href="#" class= " logo" >Creando & Reciclando</a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+
+        <a href="{% url 'home' %}" style="--i:0;">Home</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'create' %}" style="--i:1;">Construyendo</a>
+        <a href="{% url 'logout' %}"style="--i:2;">Cerrar sesión</a>
+        {% else %}
+        <a href="{% url 'register' %}" style="--i:3;">Registrame</a>
+        <a href="{% url 'login' %}" style="--i:4;">Iniciar sesión</a>
+        {% endif %}
+    </nav>
+</header>

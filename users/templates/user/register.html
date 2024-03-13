@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Create new account{% endblock title %}
+
+{% block content %}
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Registro</title>
+ <link rel="icon" type="image/png" href="{% static 'imagenes/logo.png' %}">
+ <link rel="stylesheet" type="text/css" href="{% static 'css/login-register.css' %}">
+</head>
+
+
+<section class="contenedor">
+    <div class="form-content">
+        <div class="box"> 
+            <header>Registro</header>
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="entrada">
+                    {{ form.first_name }}
+                </div>
+
+                <div class="entrada">
+                    {{ form.last_name }}
+                </div>
+
+                <div class="entrada">
+                    {{ form.username }}
+                </div>
+
+                <div class="entrada">
+                    {{ form.email }}
+                </div>
+
+                <div class="entrada">
+                    {{ form.password1 }}
+                </div>
+
+                <div class="entrada">
+                    {{ form.password2 }}
+                </div>
+                <button type="submit" class="btn">Crear cuenta</button>
+            </form>
+            
+            <p>Ya tienes una cuenta? <a href="{% url 'login' %}" class="gradient-text" > Iniciar sesión</a></p>
+        </div>
+    </div>
+</section>
+{% endblock content %}

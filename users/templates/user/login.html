@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar sesión</title>
+    <link rel="icon" type="image/png" href="{% static 'imagenes/logo.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login-register.css' %}">
+</head>
+
+<section class="contenedor">
+    <div class="form-content">
+        <div class="box"> 
+            <header>Iniciar sesión</header>
+            <form method="post" >
+                {% csrf_token %}
+                <div class="entrada">
+                    {{ form.username }}
+                    {% for error in form.username.errors %}
+                        <span class="error">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                <div class="entrada">
+                    {{ form.password }}
+                    {% for error in form.password.errors %}
+                        <span class="error">{{ error }}</span>
+                    {% endfor %}
+                </div >
+                {% for message in messages %}
+                    <div class="message">{{ message }}</div>
+                {% endfor %}
+                <button type="submit" class="btn">Ingresar</button>
+            </form> 
+            <p>No tienes una cuenta? <a href="{% url 'register' %}" class="gradient-text" > Crear cuenta</a></p>
+        </div>
+    </div>
+</section>
+{% endblock content %}

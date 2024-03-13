@@ -1,0 +1,180 @@
+@import url('style.css');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, .7),
+        rgba(0, 0, 0, .7)),
+        url(/static/imagenes/princ.jpg);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content p {
+    font-size: 20px;
+    color: #dee2e1;
+    margin: 45px  70px;
+}
+
+.reciclaje {
+    padding: 0;
+    background-image: url(/static/imagenes/niños.jpg);
+    position: relative;
+}
+
+.tipo-content{
+    text-align: center;
+    background-color: #dee2e1;
+}
+
+.h1{
+    font-size: 75px;
+    line-height: 80px;
+    padding: 15px 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 15px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 19ch;
+    animation: typing 2.5s steps(17),blink .5s step-end alternate;
+    overflow: hidden;
+}
+
+
+.spam{
+    padding: 130px 0 0;
+    height: 150px;
+    border-right-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes typing{
+    from { width: 0;}
+}
+
+@keyframes blink {
+    50% { border-color: transparent;}
+}
+
+.tipo-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    text-transform: uppercase;
+    padding: 70px 100px 0;
+    margin-bottom: 15px;
+}
+
+.txt-p {
+    font-size: 16px;
+    color: #414247;
+    padding: 40px 250px 30px;
+    margin-bottom: 35px;
+}
+
+.txt-k {
+  display: flex;
+  justify-content: center;
+}
+
+.jpg {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+  }
+
+.recicla-group {
+    padding: 0 50px 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.reci-1 {
+    padding: 0 25px;
+    width: 400px;
+}
+
+.reci-1 img{
+    width: 200px;
+}
+
+.h3{
+    padding: 25px 0 30px;
+}
+
+.reci-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.reci-1 h3 {
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+iframe {
+    width: 854px;
+    height: 480px;
+    border-radius: 15px;
+  }
+
+@media (max-width: 1000px) {
+    .header-content p {
+        font-size: 16px;
+        padding: 0 80px;
+    }
+    iframe {
+        width: 640px;
+        height: 360px;
+        border-radius: 16px;
+      }
+    .recicla-group {
+        flex-direction: column;
+        align-items: center; 
+    }
+    .reci-1 {
+        padding: 40px 25px 40px;
+        width: 450px;
+    }
+    .reci-1 img {
+        width: 450px;
+
+    }
+}
+  
